@@ -24,4 +24,10 @@ public class VatTest {
         Vat vat = new Vat(true);
         assertEquals(BigDecimal.valueOf(5), vat.calculate("charity"));
     }
+
+    @Test
+    public void shouldHaveNewBreadVATrateWhenTurnedOn() {
+        Vat vat = new Vat(true);
+        assertEquals(BigDecimal.valueOf(10), vat.calculate("bread"));
+    }
 }
